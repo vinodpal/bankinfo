@@ -16,10 +16,12 @@ public class Controllers {
 	public Controllers(BranchRepository BranchRepository) {
 		this.BranchRepository = BranchRepository;
 	}
+	//Feching all record of individual bank brach using ifsc code.
 	@RequestMapping("/infobranch")
 	public Bank getInfoById(@RequestParam (value="ifsc", defaultValue="ABHY0065001")String ifsc) {
 		return BranchRepository.getBankBranchDetails("ABHY0065001");
 	}
+	//Feching all record of banks for  particular city and  individual bank using city and bank name.
 	@RequestMapping("/infoallbranch")
 	public List<Bank> getInfoByCityAndBank(@RequestParam (value="bank_name", defaultValue="ABHYUDAYA COOPERATIVE BANK LIMITED")String bank_name,@RequestParam (value="city", defaultValue="MUMBAI")String city) {
 		return BranchRepository.getAllBankBranchDetails("ABHYUDAYA COOPERATIVE BANK LIMITED", "MUMBAI");
