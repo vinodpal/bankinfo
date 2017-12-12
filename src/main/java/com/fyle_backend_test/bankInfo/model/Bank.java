@@ -4,7 +4,8 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Bank {
-	String ifsc, bank_id, branch, address, city, district, state, bank_name;
+	String ifsc, bank_id, branch;
+	String address, city, district, state, bank_name;
 
 	@Override
 	public String toString() {
