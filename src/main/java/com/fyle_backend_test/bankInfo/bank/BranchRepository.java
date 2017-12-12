@@ -33,7 +33,7 @@ public class BranchRepository implements Branch {
 	@Transactional(readOnly = true)
 	@Override
 	public Bank getBankBranchDetails(String ifsc) {
-		return jdbcTemplate.queryForObject("select * from bank where ifsc=?", new Object[] { ifsc },
+		return jdbcTemplate.queryForObject("select * from bank where ifsc=? ", new Object[] { ifsc },
 				new BeanPropertyRowMapper<Bank>(Bank.class));
 	}
 
