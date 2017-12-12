@@ -11,6 +11,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 public class BankInfoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BankInfoApplication.class, args);
+		SpringApplication.run(BankInfoApplication.class, args );
 	}
 }
